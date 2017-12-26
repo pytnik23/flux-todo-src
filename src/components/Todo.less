@@ -1,0 +1,30 @@
+.root {
+    display: flex;
+}
+
+.text {
+    flex-grow: 1;
+    padding: 16px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.completed {
+    composes: text;
+
+    text-decoration: line-through;
+    font-style: italic;
+    color: lightgrey;
+}
+
+.removeBtn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    visibility: hidden;
+    cursor: pointer;
+
+    .root:hover & {
+        visibility: visible;
+    }
+}
